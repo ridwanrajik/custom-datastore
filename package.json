@@ -1,0 +1,22 @@
+{
+  "name": "note-app",
+  "version": "1.0.0",
+  "description": "An application to write and save notes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ridwan0029/note-app.git"
+  },
+  "author": "Ridwan Raji",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ridwan0029/note-app/issues"
+  },
+  "homepage": "https://github.com/Ridwan0029/note-app#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
