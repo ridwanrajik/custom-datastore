@@ -1,5 +1,5 @@
 {
-  "name": "note-app",
+  "name": "custom-datastore",
   "version": "1.0.0",
   "description": "An application to write and save notes",
   "main": "app.js",
@@ -8,15 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ridwan0029/note-app.git"
+    "url": "git+https://github.com/ridwanrajik/note-app.git"
   },
   "author": "Ridwan Raji",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ridwan0029/note-app/issues"
+    "url": "https://github.com/ridwanrajik/note-app/issues"
   },
-  "homepage": "https://github.com/Ridwan0029/note-app#readme",
+  "homepage": "https://github.com/ridwanrajik/note-app#readme",
   "dependencies": {
     "lodash": "^4.17.21"
-  }
+  },
+  "devDependencies": {}
 }
