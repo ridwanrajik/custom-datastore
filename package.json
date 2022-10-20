@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/ridwanrajik/note-app#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "yargs": "^17.6.0"
   },
   "devDependencies": {}
 }
