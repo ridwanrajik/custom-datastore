@@ -1,4 +1,5 @@
 const yargs = require('yargs')
+const data = require('./database.js')
 
 // Customize yargs version
 yargs.version('1.1.0')
@@ -20,8 +21,7 @@ yargs.command({
         }
     },
     handler: function (argv) {
-        console.log('Title: ' + argv.title)
-        console.log('Body: ' + argv.body)
+        data.addDatum(argv.title, argv.body)
     }
 })
 
