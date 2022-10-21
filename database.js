@@ -29,6 +29,16 @@ const removeDatum = (title) => {
     }    
 }
 
+const listData = () => {
+    const data = fetchData()
+
+    console.log(chalk.inverse('Your data'))
+
+    data.forEach((datum) => {
+        console.log(datum.title)
+    })
+}
+
 const saveData = (data) => {
     const databaseJSON = JSON.stringify(data, undefined, 2)
     fs.writeFileSync('database.json', databaseJSON)
@@ -46,5 +56,6 @@ const fetchData =  () => {
 
 module.exports = {
     addDatum,
-    removeDatum
+    removeDatum,
+    listData
 }
