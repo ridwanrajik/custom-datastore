@@ -1,10 +1,14 @@
 [
   {
-    "title": "Buy",
-    "body": "Note body here"
-  },
-  {
     "title": "Study",
     "body": "Node.js course"
+  },
+  {
+    "title": "Build Portfolio",
+    "body": "Software Development"
+  },
+  {
+    "title": "Buy",
+    "body": "Note body here"
   }
 ]
