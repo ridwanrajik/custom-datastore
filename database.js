@@ -1,11 +1,9 @@
 const fs = require('fs')
 const chalk = require('chalk')
 
-const addDatum = function (title, body) {
+const addDatum = (title, body) => {
     const data = fetchData()
-    const duplicateData = data.filter(function (datum) {
-        return datum.title === title
-    })
+    const duplicateData = data.filter((datum) => datum.title === title)
 
     if (duplicateData.length === 0) {
         data.push({
@@ -19,11 +17,9 @@ const addDatum = function (title, body) {
     }
 }
 
-const removeDatum = function (title) {
+const removeDatum = (title) => {
     const data = fetchData()
-    const dataToKeep = data.filter(function (datum) {
-        return datum.title !== title
-    })
+    const dataToKeep = data.filter((datum) => datum.title !== title)
 
     if (data.length > dataToKeep.length) {
         console.log(chalk.green.inverse('Datum removed!'))
@@ -33,12 +29,12 @@ const removeDatum = function (title) {
     }    
 }
 
-const saveData = function (data) {
+const saveData = (data) => {
     const databaseJSON = JSON.stringify(data, undefined, 2)
     fs.writeFileSync('database.json', databaseJSON)
 }
 
-const fetchData = function () {
+const fetchData =  () => {
     try {
         const dataBuffer = fs.readFileSync('database.json')
         const databaseJSON = dataBuffer.toString()
