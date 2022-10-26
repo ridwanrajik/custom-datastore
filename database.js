@@ -39,6 +39,19 @@ const listData = () => {
     })
 }
 
+const readDatum = (title) => {
+    const data = fetchData()
+    const datum = data.find((datum) => datum.title === title)
+
+    if (datum) {
+        console.log(chalk.inverse(datum.title))
+        console.log(datum.body)
+    } else {
+        console.log(chalk.red.inverse('Datum not found!'))
+    }
+}
+
+
 const saveData = (data) => {
     const databaseJSON = JSON.stringify(data, undefined, 2)
     fs.writeFileSync('database.json', databaseJSON)
@@ -57,5 +70,6 @@ const fetchData =  () => {
 module.exports = {
     addDatum,
     removeDatum,
-    listData
+    listData,
+    readDatum
 }

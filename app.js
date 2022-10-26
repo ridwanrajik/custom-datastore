@@ -54,9 +54,16 @@ yargs.command({
 // Create read command
 yargs.command({
     command: 'read',
-    describe: 'Read a note',
-    handler: function () {
-        console.log(chalk.green.inverse('Reading a note'))
+    describe: 'Read a datum',
+    builder: {
+        title: {
+            describe: 'Datum title',
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler(argv) {
+        data.readDatum(argv.title)
     }
 })
 
