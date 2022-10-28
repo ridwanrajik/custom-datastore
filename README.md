@@ -47,3 +47,21 @@ For general guidance including the available commands, and what each of the comm
 For guidance on the use of each command, including the option they take, use the command:
 
 `node app.js [command] --help`
+## Example
+###  Adding a datum to the database
+#### Success response
+![dadd-success](https://user-images.githubusercontent.com/46408547/198370608-e4dffbbd-8e5d-4e6b-b9e1-b6e883a10a58.JPG)
+#### Error response
+This error occurs when you try to add a data with an existing title to the database
+
+![dadd-error](https://user-images.githubusercontent.com/46408547/198370855-60551806-04d0-4913-862e-fdeac484820c.JPG)
+### Reading a datum from the database
+#### Success response
+![dread-success](https://user-images.githubusercontent.com/46408547/198497577-5013e970-7629-4e30-b2ff-1134a7051b6d.JPG)
+#### Error response
+This error occurs when we try to read a datum that does not exist in the database.
+
+Note that we first removed the Note data from the datastore behind the scene, to simulate an error. Then when we try to read it, we get the error below
+
+![dread-error](https://user-images.githubusercontent.com/46408547/198497666-ee90cd85-afdf-4806-8ded-2090602b9f34.JPG)
+
