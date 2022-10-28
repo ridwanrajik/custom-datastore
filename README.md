@@ -59,18 +59,34 @@ This error occurs when you try to add a data with an existing title to the datab
 #### Success response
 ![dread-success](https://user-images.githubusercontent.com/46408547/198497577-5013e970-7629-4e30-b2ff-1134a7051b6d.JPG)
 #### Error response
-This error occurs when we try to read a datum that does not exist in the database.
+This error occurs when you try to read a datum that does not exist in the database.
 
 ![dread-error](https://user-images.githubusercontent.com/46408547/198500679-4257b10d-4c81-421b-bdee-e0fd5a397f07.JPG)
 ### Removing a datum from the database
 #### Success case
 ![dremove-success](https://user-images.githubusercontent.com/46408547/198501059-53bc96c7-8c45-4e87-b02d-6a81238b7448.JPG)
 #### Error case
-This error occurs when try to remove a datum that does not exist in the database
+This error occurs when you try to remove a datum that does not exist in the database
 
 ![dremove-error](https://user-images.githubusercontent.com/46408547/198501354-3eb05ca3-231a-42bb-8c0d-a348a28e20bc.JPG)
 ### Reading all data from the database
 #### Success case
 ![dlist-success](https://user-images.githubusercontent.com/46408547/198501679-cb02edf4-e775-46c1-a8a7-af2600ad95a4.JPG)
 #### Error case
+This error occurs when you try to read all data from an empty database
 
+![dremove-error](https://user-images.githubusercontent.com/46408547/198565531-01a76fbe-e341-4cc1-b452-68ad1a842991.JPG)
+## Technology
+Node.js
+## Contribution guide
+1. Open up a new issue, and describe the feature you want to contribute.
+ 
+2. Fork this repository, then clone it to your local machine and open it in your preferred editor.
+
+4. Create a new branch for your task, and add a descriptive branch name using the git command: `git checkout -b (branch name)`
+
+5. After implementation, commit your changes with a descriptive commit message, the commit message should give an idea of the feature you worked on, use the git command: `git commit -m "commit message"`
+
+6. Push changes to your forked repo with the new branch you created using the git command: `git push origin your-branch-name`
+
+7. Create a pull request to the `develop` branch of this repository from your forked repo on github.
