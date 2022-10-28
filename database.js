@@ -32,11 +32,16 @@ const removeDatum = (title) => {
 const listData = () => {
     const data = fetchData()
 
-    console.log(chalk.inverse('Your data'))
-
-    data.forEach((datum) => {
-        console.log(datum.title)
-    })
+    if ( data.length == 0 ) {
+        console.log(chalk.red.inverse('No data to fetch. Database is empty!'))
+    } else {
+        console.log(chalk.inverse('Your data'))
+        data.forEach((datum) => {
+            console.log(datum)
+            // console.log(datum.title)
+        })
+    }
+    
 }
 
 const readDatum = (title) => {
@@ -44,8 +49,10 @@ const readDatum = (title) => {
     const datum = data.find((datum) => datum.title === title)
 
     if (datum) {
-        console.log(chalk.inverse(datum.title))
-        console.log(datum.body)
+        // console.log(chalk.inverse(datum.title))
+        // console.log(datum.body)
+        console.log(chalk.inverse('Your datum'))
+        console.log(datum)
     } else {
         console.log(chalk.red.inverse('Datum not found!'))
     }
