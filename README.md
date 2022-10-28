@@ -61,7 +61,16 @@ This error occurs when you try to add a data with an existing title to the datab
 #### Error response
 This error occurs when we try to read a datum that does not exist in the database.
 
-Note that we first removed the Note data from the datastore behind the scene, to simulate an error. Then when we try to read it, we get the error below
+![dread-error](https://user-images.githubusercontent.com/46408547/198500679-4257b10d-4c81-421b-bdee-e0fd5a397f07.JPG)
+### Removing a datum from the database
+#### Success case
+![dremove-success](https://user-images.githubusercontent.com/46408547/198501059-53bc96c7-8c45-4e87-b02d-6a81238b7448.JPG)
+#### Error case
+This error occurs when try to remove a datum that does not exist in the database
 
-![dread-error](https://user-images.githubusercontent.com/46408547/198497666-ee90cd85-afdf-4806-8ded-2090602b9f34.JPG)
+![dremove-error](https://user-images.githubusercontent.com/46408547/198501354-3eb05ca3-231a-42bb-8c0d-a348a28e20bc.JPG)
+### Reading all data from the database
+#### Success case
+![dlist-success](https://user-images.githubusercontent.com/46408547/198501679-cb02edf4-e775-46c1-a8a7-af2600ad95a4.JPG)
+#### Error case
 
