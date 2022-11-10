@@ -1,5 +1,5 @@
-const fs = require('fs')
-const chalk = require('chalk')
+const fs = require('fs');
+const chalk = require('chalk');
 
 const addDatum = (title, body) => {
     const data = fetchData()
@@ -44,6 +44,32 @@ const listData = () => {
     
 }
 
+const generateDatastore = (datastore) => {
+    const datastoreJSON = datastore + '.json'
+    try {
+        fs.unlink(fs.readFileSync(require.resolve("custom-datastore/dataCollection.json")), (err) => {
+            // if (err) {
+            //     throw err;
+            // }
+        })
+    } catch (e) {
+        
+    }
+
+    try{
+        fs.writeFileSync(require.resolve("custom-datastore/dataCollection.json"), datastoreJSON)
+        const databaseJSON = fs.readFileSync(require.resolve("custom-datastore/database.json"))
+        fs.writeFileSync(datastoreJSON, databaseJSON)
+        console.log(chalk.inverse.green('Success!'))
+        console.log('Open '+ datastoreJSON +' file to view your data')
+    } catch (e) {
+        fs.writeFileSync(datastoreJSON, '')
+        console.log('Done! Open'+ datastoreJSON +'file to view your data.')
+        console.log('Note that your database is empty. You need to add data to the database')
+    }
+    
+}
+
 const readDatum = (title) => {
     const data = fetchData()
     const datum = data.find((datum) => datum.title === title)
@@ -61,12 +87,24 @@ const readDatum = (title) => {
 
 const saveData = (data) => {
     const databaseJSON = JSON.stringify(data, undefined, 2)
-    fs.writeFileSync('database.json', databaseJSON)
+    fs.writeFileSync(require.resolve("custom-datastore/database.json"), databaseJSON)
+    try {
+        // fs.openSync(require.resolve("custom-datastore/dataCollection.json"), 'a');
+        const datastoreBuffer = fs.readFileSync(require.resolve("custom-datastore/dataCollection.json"))
+        const datastoreJSON = datastoreBuffer.toString()
+        fs.writeFileSync(datastoreJSON, databaseJSON)
+    } catch (error) {
+        // console.log(error)
+        // const datastoreJSON = ''
+        console.log('Note; To view your database in file, run the following command: ')
+        console.log('node <yourAppFile.js> generate --datastore=<yourPreferedName>')
+    }
+    
 }
 
 const fetchData =  () => {
     try {
-        const dataBuffer = fs.readFileSync('database.json')
+        const dataBuffer = fs.readFileSync(require.resolve("custom-datastore/database.json"))
         const databaseJSON = dataBuffer.toString()
         return JSON.parse(databaseJSON)
     } catch (e) {
@@ -78,5 +116,6 @@ module.exports = {
     addDatum,
     removeDatum,
     listData,
-    readDatum
+    readDatum,
+    generateDatastore
 }
