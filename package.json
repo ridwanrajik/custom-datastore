@@ -1,6 +1,6 @@
 {
   "name": "custom-datastore",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Builds database system from the scratch. You can own it by having the datastore customized",
   "main": "app.js",
   "scripts": {
