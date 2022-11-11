@@ -60,49 +60,49 @@ After the successful installation from the previous section, head on to your app
 const {database} = require('custom-datastore')
 database()
 ```
- Then head on to the terminal and proceed to the usage below. Note that if there is space inbetween the value of the flag, you will need to wrap it in quote. Wrapping in single quote will fail on windows, but not on linux or OSX. So ensure you wrap with double quote when using windows. Using any of the command in each section below will work
+ Then head on to the terminal and proceed to the usage below. Note that if there is space inbetween the value of the flag, you will need to wrap it in quote. Wrapping in single quote will fail on windows, but not on linux or OSX. So ensure you wrap with double quote when using windows. Using any of the command in each section below will work. Ensure you change `<appFile>` in the commands to the name of your app file.
 ###  3.1. <a name='Addingadatumtothedatabase'></a> Adding a datum to the database
-`node app.js add --title title-of-data --body body-of-data`
+`node <appFile>.js add --title title-of-data --body body-of-data`
 
-`node app.js add --title "title of data" --body "body of data"`
+`node <appFile>.js add --title "title of data" --body "body of data"`
 
-`node app.js add --title=title-of-data --body=body-of-data`
+`node <appFile>.js add --title=title-of-data --body=body-of-data`
 
-`node app.js add --title="title of data" --body="body of data"`
+`node <appFile>.js add --title="title of data" --body="body of data"`
 ###  3.2. <a name='Readingadatumfromthedatabase'></a>Reading a datum from the database
-`node app.js read --title title-of-data`
+`node <appFile>.js read --title title-of-data`
 
-`node app.js read --title "title of data"`
+`node <appFile>.js read --title "title of data"`
 
-`node app.js read --title=title-of-data`
+`node <appFile>.js read --title=title-of-data`
 
-`node app.js read --title="title of data"`
+`node <appFile>.js read --title="title of data"`
 ###  3.3. <a name='Readingalldatafromthedatabase'></a>Reading all data from the database
-`node app.js list`
+`node <appFile>.js list`
 ###  3.4. <a name='Removingadatumfromthedatabase'></a>Removing a datum from the database
-`node app.js remove --title title-of-data`
+`node <appFile>.js remove --title title-of-data`
 
-`node app.js remove --title "title of data"`
+`node <appFile>.js remove --title "title of data"`
 
-`node app.js remove --title=title-of-data`
+`node <appFile>.js remove --title=title-of-data`
 
-`node app.js remove --title="title of data"`
+`node <appFile>.js remove --title="title of data"`
 ###  3.5. <a name='Generatingdatabaseinfile'></a>Generating database in file
-`node app.js generate --datastore name-of-datastore`
+`node <appFile>.js generate --datastore name-of-datastore`
 
-`node app.js generate --datastore "name of datastore"`
+`node <appFile>.js generate --datastore "name of datastore"`
 
-`node app.js generate --datastore=name-of-datastore`
+`node <appFile>.js generate --datastore=name-of-datastore`
 
-`node app.js generate --datastore="name of datastore"`
+`node <appFile>.js generate --datastore="name of datastore"`
 ###  3.6. <a name='Guide'></a>Guide
 For general guidance including the available commands, and what each of the commands do, use the command:
 
-`node app.js --help`
+`node <appFile>.js --help`
 
 For guidance on the use of each command, including the option they take, use the command:
 
-`node app.js [command] --help`
+`node <appFile>.js [command] --help`
 ##  4. <a name='Example'></a>Example
 ###  4.1. <a name='Addingadatumtothedatabase-1'></a> Adding a datum to the database
 ####  4.1.1. <a name='Successresponse'></a>Success response
