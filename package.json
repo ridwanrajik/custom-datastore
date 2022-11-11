@@ -1,21 +1,21 @@
 {
   "name": "custom-datastore",
   "version": "1.1.0",
-  "description": "An application to write and save notes",
+  "description": "Builds database system from the scratch. You can own it by having the datastore customized",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ridwanrajik/note-app.git"
+    "url": "git+https://github.com/ridwanrajik/custom-datastore.git"
   },
   "author": "Ridwan Raji",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ridwanrajik/note-app/issues"
+    "url": "https://github.com/ridwanrajik/custom-datastore/issues"
   },
-  "homepage": "https://github.com/ridwanrajik/note-app#readme",
+  "homepage": "https://github.com/ridwanrajik/custom-datastore#readme",
   "dependencies": {
     "chalk": "^4.1.2",
     "yargs": "^17.6.0"

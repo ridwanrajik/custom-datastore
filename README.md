@@ -1,15 +1,16 @@
 <!-- vscode-markdown-toc -->
 # custom-datastore
-A database system application. House the database collection in a customized datastore in JSON format. It accepts inputs from the user via the command-line argument, parse it, and process it by either generating a database in the datastore, removing, or retrieving a particular datum or set of data.
+A database system application. House the database collection in a customized datastore in JSON format. It currently accepts inputs from the user via the command-line argument, parse it, and process it by either generating a database in the datastore, removing, or retrieving a particular datum or set of data.
 ## Table of content
 * 1. [Features](#Features)
-* 2. [Getting started](#Gettingstarted)
+* 2. [Installation](#Installation)
 * 3. [Usage](#Usage)
 	* 3.1. [ Adding a datum to the database](#Addingadatumtothedatabase)
 	* 3.2. [Reading a datum from the database](#Readingadatumfromthedatabase)
 	* 3.3. [Reading all data from the database](#Readingalldatafromthedatabase)
 	* 3.4. [Removing a datum from the database](#Removingadatumfromthedatabase)
-	* 3.5. [Guide](#Guide)
+	* 3.5. [Generating database in file](#Generatingdatabaseinfile)
+	* 3.6. [Guide](#Guide)
 * 4. [Example](#Example)
 	* 4.1. [ Adding a datum to the database](#Addingadatumtothedatabase-1)
 		* 4.1.1. [Success response](#Successresponse)
@@ -36,13 +37,20 @@ A database system application. House the database collection in a customized dat
 * Read a datum from the database
 * Read all data from the database
 * Remove a datum from the database
+* Generate database in file
 * Guide to usage
-##  2. <a name='Gettingstarted'></a>Getting started
-You can fork this repository, then clone it to your local machine and open it in your preferred editor.
-
-Run `npm install` to install the dependencies.
+##  2. <a name='Installation'></a>Installation
+After you've created your project using `npm init`, go ahead and run:
+ ```
+ 	npm install custom-datastore
+ ```
 ##  3. <a name='Usage'></a>Usage
-After the sucessful installation from the previous section, head on to the terminal and navigate to the root directory of the file you cloned. Then you can proceed to the usage below. Note that if there is space inbetween the value of the flag, you will need to wrap it in quote. Wrapping in single quote will fail on windows, but not on linux or OSX. So ensure you wrap with double quote when using windows. Using any of the command in each section below will work
+After the successful installation from the previous section, head on to your app file and enter the following code:
+```
+	const {database} = require('custom-datastore')
+   	database()
+```
+ Then head on to the terminal and proceed to the usage below. Note that if there is space inbetween the value of the flag, you will need to wrap it in quote. Wrapping in single quote will fail on windows, but not on linux or OSX. So ensure you wrap with double quote when using windows. Using any of the command in each section below will work
 ###  3.1. <a name='Addingadatumtothedatabase'></a> Adding a datum to the database
 `node app.js add --title title-of-data --body body-of-data`
 
@@ -69,7 +77,15 @@ After the sucessful installation from the previous section, head on to the termi
 `node app.js remove --title=title-of-data`
 
 `node app.js remove --title="title of data"`
-###  3.5. <a name='Guide'></a>Guide
+###  3.5. <a name='Generatingdatabaseinfile'></a>Generating database in file
+`node app.js generate --datastore name-of-datastore`
+
+`node app.js generate --datastore "name of datastore"`
+
+`node app.js generate --datastore=name-of-datastore`
+
+`node app.js generate --datastore="name of datastore"`
+###  3.6. <a name='Guide'></a>Guide
 For general guidance including the available commands, and what each of the commands do, use the command:
 
 `node app.js --help`
@@ -80,18 +96,17 @@ For guidance on the use of each command, including the option they take, use the
 ##  4. <a name='Example'></a>Example
 ###  4.1. <a name='Addingadatumtothedatabase-1'></a> Adding a datum to the database
 ####  4.1.1. <a name='Successresponse'></a>Success response
-![dadd-success](https://user-images.githubusercontent.com/46408547/198370608-e4dffbbd-8e5d-4e6b-b9e1-b6e883a10a58.JPG)
+![](../../../Pictures/d-add-success.JPG)
 ####  4.1.2. <a name='Errorresponse'></a>Error response
 This error occurs when you try to add a data with an existing title to the database
 
-![dadd-error](https://user-images.githubusercontent.com/46408547/198370855-60551806-04d0-4913-862e-fdeac484820c.JPG)
+![](../../../Pictures/d-add-error.JPG)
 ###  4.2. <a name='Readingadatumfromthedatabase-1'></a>Reading a datum from the database
 ####  4.2.1. <a name='Successresponse-1'></a>Success response
-![dread-success](https://user-images.githubusercontent.com/46408547/198497577-5013e970-7629-4e30-b2ff-1134a7051b6d.JPG)
+![](../../../Pictures/d-read-success.JPG)
 ####  4.2.2. <a name='Errorresponse-1'></a>Error response
 This error occurs when you try to read a datum that does not exist in the database.
-
-![dread-error](https://user-images.githubusercontent.com/46408547/198500679-4257b10d-4c81-421b-bdee-e0fd5a397f07.JPG)
+![](../../../Pictures/d-read-error.JPG)
 ###  4.3. <a name='Removingadatumfromthedatabase-1'></a>Removing a datum from the database
 ####  4.3.1. <a name='Successcase'></a>Success case
 ![dremove-success](https://user-images.githubusercontent.com/46408547/198501059-53bc96c7-8c45-4e87-b02d-6a81238b7448.JPG)
@@ -111,7 +126,7 @@ Node.js
 ##  6. <a name='Contributionguide'></a>Contribution guide
 1. Open up a new issue, and describe the feature you want to contribute.
  
-2. Fork this repository, then clone it to your local machine and open it in your preferred editor.
+2. Fork this repository, then clone it to your local machine and open it in your editor of choice.
 
 4. Create a new branch for your task, and add a descriptive branch name using the git command: `git checkout -b (branch name)`
 
