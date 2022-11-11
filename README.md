@@ -1,5 +1,13 @@
 <!-- vscode-markdown-toc -->
-# custom-datastore
+# custom-datastore 
+![npm](https://img.shields.io/npm/v/custom-datastore) &nbsp;
+![npm](https://img.shields.io/npm/dt/custom-datastore) &nbsp;
+[![GitHub issues](https://img.shields.io/github/issues/ridwanrajik/custom-datastore)](https://github.com/ridwanrajik/custom-datastore/issues) &nbsp;
+![GitHub User's stars](https://img.shields.io/github/stars/ridwanrajik) &nbsp;
+![GitHub followers](https://img.shields.io/github/followers/ridwanrajik?style=social) &nbsp;
+![Twitter Follow](https://img.shields.io/twitter/follow/RidwanRaji_K?style=social) &nbsp;
+![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FRidwanRaji_K)
+
 A database system application. House the database collection in a customized datastore in JSON format. It currently accepts inputs from the user via the command-line argument, parse it, and process it by either generating a database in the datastore, removing, or retrieving a particular datum or set of data.
 ## Table of content
 * 1. [Features](#Features)
@@ -44,13 +52,13 @@ A database system application. House the database collection in a customized dat
 ##  2. <a name='Installation'></a>Installation
 After you've created your project using `npm init`, go ahead and run:
  ```
- 	npm install custom-datastore
+ npm install custom-datastore
  ```
 ##  3. <a name='Usage'></a>Usage
 After the successful installation from the previous section, head on to your app file and enter the following code:
 ```
-	const {database} = require('custom-datastore')
-   	database()
+const {database} = require('custom-datastore')
+database()
 ```
  Then head on to the terminal and proceed to the usage below. Note that if there is space inbetween the value of the flag, you will need to wrap it in quote. Wrapping in single quote will fail on windows, but not on linux or OSX. So ensure you wrap with double quote when using windows. Using any of the command in each section below will work
 ###  3.1. <a name='Addingadatumtothedatabase'></a> Adding a datum to the database
