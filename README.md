@@ -24,6 +24,8 @@ A database system application. House the database collection in a customized dat
 	* 4.4. [Reading all data from the database](#Readingalldatafromthedatabase-1)
 		* 4.4.1. [Success case](#Successcase-1)
 		* 4.4.2. [Error case](#Errorcase-1)
+	* 4.5. [Generating database in file](#Generatingdatabaseinfile-1)
+		* 4.5.1. [Success case](#Successcase-1)
 * 5. [Technology](#Technology)
 * 6. [Contribution guide](#Contributionguide)
 
@@ -96,31 +98,35 @@ For guidance on the use of each command, including the option they take, use the
 ##  4. <a name='Example'></a>Example
 ###  4.1. <a name='Addingadatumtothedatabase-1'></a> Adding a datum to the database
 ####  4.1.1. <a name='Successresponse'></a>Success response
-![](../../../Pictures/d-add-success.JPG)
+![d-add-success](https://user-images.githubusercontent.com/46408547/201300179-424b6d5e-0248-4367-b97c-50a579dff79d.JPG)
 ####  4.1.2. <a name='Errorresponse'></a>Error response
 This error occurs when you try to add a data with an existing title to the database
 
-![](../../../Pictures/d-add-error.JPG)
+![d-add-error](https://user-images.githubusercontent.com/46408547/201300565-95031d31-115a-41b9-84b7-2e40f4d580a4.JPG)
 ###  4.2. <a name='Readingadatumfromthedatabase-1'></a>Reading a datum from the database
 ####  4.2.1. <a name='Successresponse-1'></a>Success response
-![](../../../Pictures/d-read-success.JPG)
+![d-read-success](https://user-images.githubusercontent.com/46408547/201300710-fcf3f19f-4513-4979-ad91-ed051a8d8dbb.JPG)
 ####  4.2.2. <a name='Errorresponse-1'></a>Error response
 This error occurs when you try to read a datum that does not exist in the database.
-![](../../../Pictures/d-read-error.JPG)
+
+![d-read-error](https://user-images.githubusercontent.com/46408547/201301109-6325effa-5698-4dca-8de6-b5fa092a1334.JPG)
 ###  4.3. <a name='Removingadatumfromthedatabase-1'></a>Removing a datum from the database
 ####  4.3.1. <a name='Successcase'></a>Success case
-![dremove-success](https://user-images.githubusercontent.com/46408547/198501059-53bc96c7-8c45-4e87-b02d-6a81238b7448.JPG)
+![d-remove-succes](https://user-images.githubusercontent.com/46408547/201301207-debfec95-ca1a-4e89-98fc-d90a30a38075.JPG)
 ####  4.3.2. <a name='Errorcase'></a>Error case
 This error occurs when you try to remove a datum that does not exist in the database
 
-![dremove-error](https://user-images.githubusercontent.com/46408547/198501354-3eb05ca3-231a-42bb-8c0d-a348a28e20bc.JPG)
+![d-remove-error](https://user-images.githubusercontent.com/46408547/201301309-7c87d597-1245-46ed-8908-570e751947e7.JPG)
 ###  4.4. <a name='Readingalldatafromthedatabase-1'></a>Reading all data from the database
 ####  4.4.1. <a name='Successcase-1'></a>Success case
-![dlist-success](https://user-images.githubusercontent.com/46408547/198501679-cb02edf4-e775-46c1-a8a7-af2600ad95a4.JPG)
+![d-list-success](https://user-images.githubusercontent.com/46408547/201301524-6c952a7b-de80-4227-9dab-56a5e7947abe.JPG)
 ####  4.4.2. <a name='Errorcase-1'></a>Error case
 This error occurs when you try to read all data from an empty database
 
-![dremove-error](https://user-images.githubusercontent.com/46408547/198565531-01a76fbe-e341-4cc1-b452-68ad1a842991.JPG)
+![d-list-error](https://user-images.githubusercontent.com/46408547/201301674-7de06a7c-c047-4716-bad5-b5ff745504a0.JPG)
+###  4.5. <a name='Generatingdatabaseinfile-1'></a>Generating database in file
+####  4.5.1. <a name='Successcase-1'></a>Success case
+![d-generate](https://user-images.githubusercontent.com/46408547/201303025-ce6e79d5-3ec5-4841-b352-8293eecb4f7d.JPG)
 ##  5. <a name='Technology'></a>Technology
 Node.js
 ##  6. <a name='Contributionguide'></a>Contribution guide
