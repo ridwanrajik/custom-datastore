@@ -88,5 +88,6 @@ const database = () => {
 }
 
 module.exports = {
-    database
+    database,
+    data
 }
